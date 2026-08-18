@@ -63,6 +63,25 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 500; line-height: .98; font-size: clamp(3rem, 12vw, 5rem); }
 .hero h1 span { display: block; font-style: italic; }
 .hero h1 em { display: block; font-size: .42em; color: var(--gold-light); font-style: normal; margin: .12em 0; }
+.couple-portrait {
+  width: min(360px, 82vw);
+  margin: 24px auto 0;
+  padding: 7px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #f6df9a, #b98122, #f6df9a);
+  box-shadow: 0 20px 45px rgba(0,0,0,.28);
+  position: relative;
+  z-index: 1;
+}
+.couple-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.07 / 1;
+  object-fit: cover;
+  object-position: center 42%;
+  border-radius: 22px;
+  background: #fff;
+}
 .hero-copy { margin: 22px 0 0; font-size: 1.08rem; color: #fff3ea; }
 .gold-rule { width: 82px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold-light), transparent); margin: 28px auto; }
 .invitation-copy { max-width: 520px; margin: 0; line-height: 1.75; color: #f8e8e5; }
@@ -123,6 +142,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .qr-card img { width: 150px; aspect-ratio: 1; object-fit: cover; border-radius: 18px; background: white; padding: 7px; }
 .qr-card h3 { margin: 0 0 7px; color: var(--wine); font-family: Georgia, serif; }
 .qr-card p { margin: 0; color: var(--muted); line-height: 1.55; font-size: .94rem; }
+.qr-url { display: block; margin-top: 8px; color: #8d6b70; word-break: break-all; }
 .pdf-btn { max-width: 620px; margin: 18px auto 0; padding: 14px 18px; background: #f4e2b1; color: #5e3d0b; border: 1px solid #dfc179; display: flex; }
 
 footer { padding: 42px 24px 50px; background: #3d060d; color: #f8e8e4; text-align: center; }
@@ -132,7 +152,8 @@ footer p { margin: 10px 0 0; }
 footer .small { font-size: .82rem; color: #d8bfc1; }
 
 @media (max-width: 520px) {
-  .hero { min-height: 720px; padding-left: 22px; padding-right: 22px; }
+  .hero { min-height: 820px; padding-left: 22px; padding-right: 22px; }
+  .couple-portrait { width: min(330px, 86vw); margin-top: 20px; }
   .section { padding: 48px 18px; }
   .countdown { gap: 7px; }
   .countdown div { padding: 17px 5px 14px; border-radius: 15px; }
